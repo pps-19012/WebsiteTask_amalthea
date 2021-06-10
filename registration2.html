@@ -44,10 +44,10 @@ function SubForm (){
         type:'post',
         data:$("#myForm").serializeArray(),
         success: function(){
-          alert("Form Data Submitted :)")
+          alert("Form Submitted. Your response has been recorded.")
         },
         error: function(){
-          alert("There was an error :(")
+          alert("There was an error. Please try again.")
         }
     });
 }
