@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: rgb(6, 168, 231);
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  form {
+    width: 70%;
+    margin: auto;
+  }
+
+  fieldset {
+    padding: 20px;
+    border: 3px solid #58b7ee;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 0 5px #333;
+    background-color: rgb(10, 6, 63);
+  }
+  
+  .column {
+    float: left;
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  .card {
+    box-shadow: 8px 8px 8px 8px rgb(4, 56, 73);
+    margin: 8px;
+    padding: 16px;
+    background-color: rgb(10, 6, 63);
+  }
+  
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: rgba(0, 214, 170, .85);
+    color: rgb(255, 255, 255);
+  }
+/*  .img-btn {
+    width: 65px;
+    margin-left: -18px;
+    margin-top: -10px;
+    border-radius: 100%;
+}*/
+  .container {
+    padding: 0 16px;
+    background-color: rgba(50, 62, 238, 0.85);
+    color: white;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: rgb(243, 243, 243);
+    font-weight: bold;
+  }
+  
+  .button {
+  
+  height: 40px;
+  width: 100%;
+  border: 3px solid #207888;
+  outline: none;
+  background:#1f22ee;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+  }
+  
+  .button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(10, 44, 240);
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }

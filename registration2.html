@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registration2.css">
+<title>Events Registration - Amalthea 2021</title>
+<div id="event-registration">
+    <form id="myForm" method="POST" action="">
+      <fieldset><h1>EVENTS REGISTRATION - AMALTHEA 2021</h1>
+        <h4>Check out our <a href="#"> EVENTS</a> page to get more info</h4></fieldset>
+      <!-- Form contents will go here -->
+      <fieldset>
+        <h3>Please fill out the following form</h3>
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name" />
+        <label for="middle-name">Middle Name</label>
+        <input type="text" id="middle-name" name="middle-name" placeholder="Type NA if not applicable"/>
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name" />
+        <label for="events">Events</label>
+        <select id="events" name ="events">
+            <option>--Choose the event you want to participate in--</option>
+          </select>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="eg. xyz@gmail.com">
+        <label for="mobile_number">Mobile Number</label>
+        <input type="text" id="mobile_number" name="mobile-number" />
+        <label for="last-name">Comments</label>
+        <input type="text" id="comments" name="comments" />
+      </fieldset>
+
+      </form>
+      <button onclick="SubForm()">Submit</button>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/13890/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+}
+</script>
+
+<script>
+
+var statesSelect = document.getElementById("events");
+var events = {1: "CRYPTORUSH",
+2:"CHEM-e-THINK",
+3: "ICON",
+4: "AUTODESK FUSION 360 DESIGN CONTEST",
+5: "D'CODE",
+6: "CRYPTIX",
+7: "GAMEJAM",
+8:"QUICKWIT"}
+for (var key in events) {
+console.log(key);
+
+if (events.hasOwnProperty(key)) {
+console.log(key);
+var option = document.createElement("option"); // Create a <p> node
+var t = document.createTextNode(events[key]); // Create a text node
+option.appendChild(t); //Append the text to<p>
+statesSelect.appendChild(option);
+}
+}
+
+</script>
+</head>
+
+<body>
+</body>
+
+</html>
